@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>史伝ワークス | Shiden Works Official</title>
+    <meta name="description" content="インディーゲーム開発チーム「史伝ワークス」の公式ポータルサイト。現在「戦国選義伝」を鋭意制作中。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <span class="loader-text">史伝ワークス</span>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="assets/logo.png" alt="史伝ワークス ロゴ" class="logo-img">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section id="home" class="hero">
+            <div class="hero-background" style="background-image: url('assets/hero_bg.png'); filter: brightness(0.6);">
+            </div>
+            <div class="hero-content fade-in-up">
+                <h2 class="hero-subtitle">歴史を紡ぎ、ゲームを創る</h2>
+                <h1 class="hero-title">史伝ワークス</h1>
+                <p class="hero-description">
+                    重厚な物語と奥深い戦術性。<br>
+                    記憶に残るゲーム体験をお届けするインディー開発チーム。
+                </p>
+                <a href="#games" class="btn-primary btn-large scroll-down">作品を見る</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="arrow"></div>
+            </div>
+        </section>
+
+        <!-- Aboutセクション -->
+        <section id="about" class="about section-padding">
+            <div class="container text-center fade-in">
+                <div class="section-header">
+                    <span class="section-subtitle">About Us</span>
+                    <h2 class="section-title">チーム概要</h2>
+                    <div class="title-decoration"></div>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        「史伝ワークス」は、歴史をテーマにしたゲームを中心に制作しているインディーゲーム開発チームです。<br><br>
+                        プレイヤー自身の選択が歴史を動かすような「奥深い戦術性」と、「心揺さぶる重厚なストーリー」を融合させたゲーム体験の創造を目指しています。現在は、戦国時代を舞台にした本格2DRPG『戦国選義伝』を鋭意開発中です。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gamesセクション -->
+        <section id="games" class="features section-padding dark-bg">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-subtitle">Works</span>
+                    <h2 class="section-title">開発タイトル</h2>
+                    <div class="title-decoration"></div>
+                </div>
+
+                <div class="feature-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto;">
+                    <!-- 戦国選義伝 カード -->
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-img-wrapper" style="aspect-ratio: 21/9; background-color: #05070A;">
+                            <img src="assets/sengiden_logo.png" alt="戦国選義伝" style="object-fit: contain; padding: 20px;">
+                            <div class="feature-overlay"
+                                style="background: linear-gradient(to top, var(--color-bg-panel) 5%, transparent);">
+                            </div>
+                        </div>
+                        <div class="feature-info text-center" style="margin-top: -60px; padding-bottom: 50px;">
+                            <h3 class="feature-title"
+                                style="justify-content: center; font-size: 2.2rem; margin-bottom: 10px;">戦国選義伝</h3>
+                            <p class="feature-desc" style="margin-bottom: 30px;">
+                                開発中タイトル | 本格2D戦術シミュレーションRPG
+                            </p>
+                            <a href="sengiden/index.html" class="btn-primary">公式サイトを見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / CTA -->
+        <section id="contact" class="cta section-padding">
+            <div class="container text-center fade-in">
+                <h2 class="cta-title">お問い合わせ</h2>
+                <p class="cta-desc">開発状況や最新情報は公式SNSにて発信中です。</p>
+                <div class="cta-buttons">
+                    <a href="https://x.com/ShidenWorks" target="_blank" rel="noopener noreferrer" class="btn-primary"
+                        style="background: transparent; display: inline-block;">公式Xを見る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="史伝ワークス ロゴ" style="max-height: 80px;">
+                    <p class="footer-company">SHIDEN WORKS</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="https://x.com/ShidenWorks" target="_blank" rel="noopener noreferrer">X公式ページ</a>
+                        </li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shiden Works. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

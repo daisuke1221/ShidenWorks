@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 史伝ワークス</title>
+    <meta name="description" content="史伝ワークスへのお問い合わせはこちらから。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: left;
+        }
+        .form-group label {
+            color: var(--color-gold);
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+        }
+        .form-group input, .form-group textarea {
+            padding: 12px 15px;
+            background: rgba(11, 14, 20, 0.8);
+            border: 1px solid rgba(200, 169, 126, 0.3);
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-gold-light);
+            box-shadow: 0 0 10px rgba(200, 169, 126, 0.2);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body class="dark-bg">
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <span class="loader-text">お問い合わせ</span>
+        </div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="main-header scrolled">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" style="font-size: 1.2rem; color: #fff; font-family: var(--font-heading); display: flex; align-items: center; gap: 10px;">
+                    <img src="assets/logo.png" alt="史伝ワークス" style="height: 40px;">
+                    <span style="display: none;">史伝ワークス</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">トップページへ戻る</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <section class="section-padding">
+            <div class="container" style="max-width: 700px; background: rgba(20, 28, 41, 0.5); padding: 50px; border: 1px solid rgba(200, 169, 126, 0.2); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center;">
+                <div class="section-header fade-in">
+                    <span class="section-subtitle">Contact</span>
+                    <h2 class="section-title">お問い合わせ</h2>
+                    <div class="title-decoration"></div>
+                </div>
+
+                <div class="fade-in-up">
+                    <p style="margin-bottom: 30px; color: var(--color-text-main); line-height: 1.8;">
+                        ゲームに関するご質問や、チームへのご連絡は以下のフォームよりお願いいたします。<br>
+                        <span style="font-size: 0.9rem; color: var(--color-text-muted);">※現在開発中のため、ご返信にお時間をいただく場合がございます。</span>
+                    </p>
+
+                    <!-- お問い合わせフォームのUI -->
+                    <!-- ※実際のメール送信には、PHP等のバックエンド実装や、Formspree等の外部サービスを利用する必要があります -->
+                    <form class="contact-form" onsubmit="alert('※現在はデモ用のUIです。\n実際のメール送信機能（バックエンド）の実装が必要です。'); return false;">
+                        <div class="form-group">
+                            <label for="name">お名前</label>
+                            <input type="text" id="name" name="name" required placeholder="例：史伝 太郎">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">メールアドレス</label>
+                            <input type="email" id="email" name="email" required placeholder="例：info@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">件名</label>
+                            <input type="text" id="subject" name="subject" required placeholder="お問い合わせの件名">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容</label>
+                            <textarea id="message" name="message" required placeholder="詳細をご記入ください"></textarea>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <button type="submit" class="btn-primary btn-large" style="width: 100%;">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shiden Works. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
